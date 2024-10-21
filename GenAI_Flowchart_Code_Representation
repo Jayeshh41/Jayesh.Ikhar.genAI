@@ -1,0 +1,19 @@
+INPUT "text file"
+
+IF ParseGrammar THEN
+    Identify "Dates"
+    Identify "Places"
+    Identify "Names"
+ENDIF
+
+IF sequential_output THEN
+    Enable sequential output
+ENDIF
+
+IF check_for_redundancy THEN
+    IF repeating THEN
+        OUTPUT "Increase count"
+    ELSE
+        OUTPUT "Save to file"
+    ENDIF
+ENDIF
